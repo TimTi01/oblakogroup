@@ -5,7 +5,6 @@ class TodosController < ApplicationController
   def create
     # @todo = Todo.create(todo_params)
     @todo = @project.todos.create(todo_params)
-
     if @todo.save
       render status: :created
     else
